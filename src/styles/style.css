@@ -1,0 +1,160 @@
+@import './loading.css';
+@import './fonts.css';
+
+@import './display-page-effect-fade.css';
+@import './display-page-effect-fly-1by1.css';
+@import './display-page-effect-float-1by1.css';
+@import './display-page-effect-lightflash.css';
+
+@import './keyboard-mac.css';
+@import './keyboard-vintage.css';
+@import './keyboard-cyberpunk.css';
+
+@import './display-paper.css';
+@import './display-terminal.css';
+@import './display-cyberpunk.css';
+
+@import './simple-modal.css';
+
+@media screen and (max-width: 600px) {
+    .fingering-practiced .display-panel .page {
+        transform: scale(.5);
+    }
+    
+    .fingering-practiced .keyboard-box {
+        height: calc(18em * .5);
+    }
+    
+    .keyboard-container {
+        transform: scale(.5);
+    }
+}
+
+@media screen and (max-height: 600px) {
+    .fingering-practiced .display-panel .page {
+        transform: scale(.8);
+    }
+    
+    .fingering-practiced .keyboard-box {
+        height: calc(18em * .8);
+    }
+    
+    .keyboard-container {
+        transform: scale(.8);
+    }
+}
+
+@media screen and (max-height: 300px) {
+    .fingering-practiced .display-panel .page {
+        transform: scale(.6);
+    }
+    
+    .fingering-practiced .keyboard-box {
+        height: calc(18em * .6);
+    }
+    
+    .keyboard-container {
+        transform: scale(.6);
+    }
+}
+
+
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    font-size: 16px;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+
+.tools-bar {
+    flex: 0;
+    height: 1.8em;
+    font-size: 10px;
+    padding: .2em .8em;
+    background-color: dodgerblue;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.tools-bar span {
+    color: white;
+    margin-left: .5em;
+    line-height: .4em;
+    text-transform: uppercase;
+    vertical-align: baseline;
+}
+
+.tools-bar select {
+    width: 15em;
+    font-size: 10px;
+    margin-left: 1em;
+}
+
+.fingering-practiced {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: 100vw;
+    height: calc(100vh - 1.2em - 1px);
+    align-items: center;
+    
+}
+
+.fingering-practiced .display-panel {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    flex-direction: column;
+    position: relative;
+    
+}
+
+.fingering-practiced .display-panel .page {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.fingering-practiced .display-panel .page.active,
+.fingering-practiced .display-panel .page.complete {
+    display: flex;
+}
+
+.fingering-practiced .keyboard-box {
+    display: flex;
+    flex: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.keyboard-container {
+    display: flex;
+    flex: 0;
+    margin-bottom: 0em;
+    max-width: max-content;
+
+}  
+
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    
+}
